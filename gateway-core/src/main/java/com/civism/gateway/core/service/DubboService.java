@@ -8,8 +8,6 @@ import com.civism.gateway.core.entity.SystemParamDTO;
  * @author : civism
  * @version 1.0
  * @date 2020/8/10 14:53
- * @E-mail:695234456@qq.com
- * @return
  */
 @RpcController("home")
 public interface DubboService {

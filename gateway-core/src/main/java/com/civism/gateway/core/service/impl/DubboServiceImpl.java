@@ -11,8 +11,6 @@ import javax.annotation.Resource;
  * @author : civism
  * @version 1.0
  * @date 2020/8/10 14:54
- * @E-mail:695234456@qq.com
- * @return
  */
 @Service
 public class DubboServiceImpl implements DubboService {

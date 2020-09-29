@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author : civism
  * @version 1.0
  * @date 2020/8/8 11:14
- * @E-mail:695234456@qq.com
- * @return
  */
 @SpringBootApplication
 @EnableDubbo

@@ -10,8 +10,6 @@ import org.apache.dubbo.rpc.service.GenericService;
  * @author : civism
  * @version 1.0
  * @date 2020/8/10 15:35
- * @E-mail:695234456@qq.com
- * @return
  */
 public class DubboFactory {
 

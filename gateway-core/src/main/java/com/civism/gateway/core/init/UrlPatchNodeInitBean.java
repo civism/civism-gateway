@@ -21,8 +21,6 @@ import java.util.Map;
  * @author : civism
  * @version 1.0
  * @date 2020/8/18 16:51
- * @E-mail:695234456@qq.com
- * @return
  */
 @Component
 public class UrlPatchNodeInitBean implements ApplicationContextAware {

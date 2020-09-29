@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author : civism
  * @version 1.0
  * @date 2020/8/8 11:25
- * @E-mail:695234456@qq.com
- * @return
  */
 @RestController
 public class IndexController {

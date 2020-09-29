@@ -8,8 +8,6 @@ import java.io.Serializable;
  * @author : civism
  * @version 1.0
  * @date 2020/8/8 11:30
- * @E-mail:695234456@qq.com
- * @return
  */
 @Data
 public class SystemParamDTO implements Serializable {

@@ -12,8 +12,6 @@ import javax.annotation.Resource;
  * @author : civism
  * @version 1.0
  * @date 2020/8/18 9:27
- * @E-mail:695234456@qq.com
- * @return
  */
 @Configuration
 public class BeanFactoryConfig {

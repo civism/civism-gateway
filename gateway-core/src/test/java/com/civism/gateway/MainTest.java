@@ -1,6 +1,7 @@
 package com.civism.gateway;
 
-import java.util.Arrays;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author : civism
@@ -12,22 +13,22 @@ import java.util.Arrays;
 public class MainTest {
 
     public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        System.out.println(111111);
+        executorService.submit(new Task());
 
+        System.out.println("2222233321");
 
-        int[] nums = {0,1,0};
-         moveZeroes(nums);
-        System.out.println(Arrays.toString(nums));
     }
 
-    public static void moveZeroes(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < nums.length - 1; j++) {
-                if (nums[j] == 0) {
-                    int n = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = n;
-                }
-            }
+    public static class Task implements Runnable {
+
+        @Override
+        public void run() {
+            System.out.println("线城市");
+            throw new RuntimeException("12333");
         }
     }
+
+
 }

@@ -16,8 +16,6 @@ import java.util.List;
  * @author : civism
  * @version 1.0
  * @date 2020/9/18 11:17
- * @E-mail:695234456@qq.com
- * @return
  */
 @Service
 public class GateWayRegisterWatcher implements InitializingBean, Watcher {
@@ -26,9 +24,8 @@ public class GateWayRegisterWatcher implements InitializingBean, Watcher {
     private CuratorFramework curatorFramework;
 
     public void registerWatcher() throws Exception {
-//        curatorFramework.getData().usingWatcher(this).forPath(GatewayConstants.ROOTNODE);
         List<String> strings = curatorFramework.getChildren().forPath(GatewayConstants.ROOTNODE);
-        System.out.println();
+        System.out.println(strings);
     }
 
     @Override

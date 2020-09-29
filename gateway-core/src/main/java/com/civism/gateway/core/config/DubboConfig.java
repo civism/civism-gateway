@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
  * @author : civism
  * @version 1.0
  * @date 2020/8/17 17:23
- * @E-mail:695234456@qq.com
- * @return
  */
 @Data
 @Component
