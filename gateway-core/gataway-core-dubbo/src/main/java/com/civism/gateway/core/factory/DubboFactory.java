@@ -13,9 +13,9 @@ import org.apache.dubbo.rpc.service.GenericService;
  */
 public class DubboFactory {
 
-    private final String address;
+    private String address;
 
-    private final String protocol;
+    private String protocol;
 
     public DubboFactory(String name, String address, String protocol) {
         this.address = address;
@@ -44,11 +44,11 @@ public class DubboFactory {
     }
 
 
-    public static void main(String[] args) {
-     DubboFactory dubboFactory = new DubboFactory("civism-gateway", "127.0.0.1:2181", "zookeeper");
-        Object sayHello = dubboFactory.call("com.example.demo.service.HelloService", "sayHello", null, new String[]{}, new Object[]{});
-        System.out.println(sayHello);
-    }
+//    public static void main(String[] args) {
+//        DubboFactory dubboFactory = new DubboFactory("civism-gateway", "127.0.0.1:2181", "zookeeper");
+//        Object sayHello = dubboFactory.call("com.example.demo.service.HelloService", "sayHello", null, new String[]{}, new Object[]{});
+//        System.out.println(sayHello);
+//    }
 
 
 }

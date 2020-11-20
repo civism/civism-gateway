@@ -1,6 +1,11 @@
 package com.civism.gateway.service.impl;
 
+import com.civism.gateway.common.SystemParamDTO;
+import com.civism.gateway.interfaces.ExecutorFactory;
 import com.civism.gateway.service.RouterService;
+import com.civism.gateway.service.factory.GatewayFactory;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,5 +16,17 @@ import org.springframework.stereotype.Service;
  * @return
  */
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class RouterServiceImpl implements RouterService {
+
+
+    private final GatewayFactory gatewayFactory;
+
+
+    @Override
+    public Object route(SystemParamDTO systemParam) {
+        ExecutorFactory executorProtocol = gatewayFactory.getExecutorProtocol(systemParam.getProtocol());
+        return executorProtocol.executor(null);
+    }
 }

@@ -1,5 +1,7 @@
 package com.civism.gateway.service;
 
+import com.civism.gateway.common.SystemParamDTO;
+
 /**
  * @author : civism
  * @version 1.0
@@ -8,4 +10,6 @@ package com.civism.gateway.service;
  * @return
  */
 public interface RouterService {
+
+    Object route(SystemParamDTO systemParam);
 }

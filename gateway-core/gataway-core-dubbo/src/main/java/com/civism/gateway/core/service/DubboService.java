@@ -2,7 +2,6 @@ package com.civism.gateway.core.service;
 
 import com.civism.gateway.core.annotation.RpcController;
 import com.civism.gateway.core.annotation.UrlPatch;
-import com.civism.gateway.core.entity.SystemParamDTO;
 
 /**
  * @author : civism
@@ -19,7 +18,7 @@ public interface DubboService {
      * @return
      */
     @UrlPatch(url = {"/index", "/hello"})
-    Object callBack(SystemParamDTO systemParamDTO);
+    Object callBack(Object systemParamDTO);
 
     /**
      * 回调
