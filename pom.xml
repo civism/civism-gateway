@@ -18,6 +18,7 @@
         <module>gateway-web</module>
         <module>gateway-core</module>
         <module>gateway-common</module>
+        <module>gateway-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -60,6 +61,11 @@
             <dependency>
                 <groupId>com.civism</groupId>
                 <artifactId>gateway-common</artifactId>
+                <version>${gateway.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.civism</groupId>
+                <artifactId>gateway-service</artifactId>
                 <version>${gateway.version}</version>
             </dependency>
             <dependency>

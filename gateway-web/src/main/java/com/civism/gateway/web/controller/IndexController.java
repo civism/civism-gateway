@@ -1,6 +1,7 @@
 package com.civism.gateway.web.controller;
 
-import com.civism.gateway.core.entity.SystemParamDTO;
+import com.civism.gateway.common.Result;
+import com.civism.gateway.common.SystemParamDTO;
 import com.civism.gateway.core.factory.DubboFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class IndexController {
 
 
     @PostMapping("/index")
-    public Object index(@RequestBody SystemParamDTO systemParam) {
+    public Result<Object> index(@RequestBody SystemParamDTO systemParam) {
         DubboFactory dubboFactory = new DubboFactory("civism-gateway", "127.0.0.1:2181", "zookeeper");
 
         return null;
