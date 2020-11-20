@@ -13,8 +13,6 @@ import javax.annotation.Resource;
  * @author : civism
  * @version 1.0
  * @date 2020/8/26 10:46
- * @E-mail:695234456@qq.com
- * @return
  */
 @Component
 public class ZookeeperNodeInItBean implements InitializingBean {

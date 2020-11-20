@@ -10,8 +10,6 @@ import java.util.Enumeration;
  * @author : civism
  * @version 1.0
  * @date 2020/8/26 11:04
- * @E-mail:695234456@qq.com
- * @return
  */
 public class IpUtil {
 

@@ -2,11 +2,11 @@ dubbo:
   application:
     name: civism-gateway
   registry:
-    address: 127.0.0.1:2181
+    address: 192.168.100.240:2181
     check: true
     protocol: zookeeper
 
 zookeeper:
   sessionTimeoutMs: 60000
   connectionTimeoutMs: 60000
-  address: 127.0.0.1:2181
+  address: 192.168.100.240:2181
