@@ -2,10 +2,12 @@ package com.civism.gateway.web.controller;
 
 import com.civism.gateway.common.Result;
 import com.civism.gateway.common.SystemParamDTO;
-import com.civism.gateway.core.factory.DubboFactory;
+import com.civism.gateway.service.RouterService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author : civism
@@ -15,11 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
+    @Resource
+    private RouterService routerService;
 
     @PostMapping("/index")
     public Result<Object> index(@RequestBody SystemParamDTO systemParam) {
-        DubboFactory dubboFactory = new DubboFactory("civism-gateway", "127.0.0.1:2181", "zookeeper");
-
-        return null;
+        Object route = routerService.route(systemParam);
+        return Result.success(route);
     }
 }

@@ -25,7 +25,7 @@ public class DubboSpringFactory implements ExecutorFactory {
     @Value("${dubbo.registry.protocol}")
     private String protocol;
 
-    private DubboFactory dubboFactory;
+    private static DubboFactory dubboFactory;
 
     public DubboFactory getInit() {
         return new DubboFactory(applicationName, address, protocol);
@@ -40,6 +40,6 @@ public class DubboSpringFactory implements ExecutorFactory {
                 }
             }
         }
-        return dubboFactory.call(null, null, null, null, null);
+        return dubboFactory.call(executorEntity.getInterfaceName(), executorEntity.getMethod(), executorEntity.getVersion(), executorEntity.getParameterTypes(), executorEntity.getArgs());
     }
 }
